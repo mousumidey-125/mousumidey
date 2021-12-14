@@ -1,0 +1,49 @@
+{% extends 'core\siteBase.html' %}
+{% load static %}
+{% block title %} {{block.super}}-all question{% endblock title %}
+{% block content %}
+<div class="row">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+<div class="card-body">
+<div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <h3>All Questions for you</h3>
+                  
+                </ul>
+              </div>
+              <br>
+    {% for i in questiondata %}
+    <div class="post clearfix">
+        <div class="user-block">
+            <img class="img-circle img-bordered-sm" src="{{i.ownerimg}}" alt="User Image">
+            <span class="username">
+                <a href="#">{{i.ownername}}</a>
+            </span>
+            <span class="description">{{i.postedtime}}</span>
+        </div>
+        <!-- /.user-block -->
+        {{i.question|safe}}
+
+        <span class="description"><a href="{% url 'answersubmit' pk=i.id fk=i.owner %}"
+                class="btn btn-danger">Answer</a></span>
+
+        <!-- <form class="form-horizontal" action="" method="POST">
+            <div class="input-group input-group-sm mb-0">
+                <div class="form-group">
+                    <textarea class="form-control" rows="2" cols="145" placeholder="Enter ..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+        </form> -->
+
+    </div>
+    {% endfor %}
+    
+</div>
+</div>
+<div class="col-sm-2">
+</div>
+</div>
+{% endblock content %}

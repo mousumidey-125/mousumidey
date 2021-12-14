@@ -1,0 +1,54 @@
+{% extends 'core\siteBase.html' %}
+{% load static %}
+{% block title %} {{block.super}}-category{% endblock title %}
+{% block content %}
+<div class="card-body">
+<div class="row">
+        <div class="col-sm-6">
+    <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <h5 style="text-align:center">Create a new category here..</h5>
+        <hr>
+        <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-8">
+                {{CategoryForm.name}}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </form>
+    </div>
+    <div class="col-sm-6">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in categorydata %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>
+                    {% if i.status %}
+                    <span class="badge bg-success">Approve</span>
+                    {% else %}
+                    <span class="badge bg-info">Pending</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+{% endblock content %}

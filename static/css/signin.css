@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .a{
+    background: rgb(219,226,226);
+  }
+  
+  .wrapper{
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    background:#fff;
+    padding: 60px 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+  }
+  
+
+  .wrapper1{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    background:#fff;
+    padding: 60px 45px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+  }
+  .wrapper .title{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #3aaf9f;
+  }
+  .wrapper1 .title{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #3aaf9f;
+  }
+  
+  .login-btn{
+  width:100%;
+  border-radius:25px;
+  margin: 20px auto 0;
+  background: #3aaf9f;
+  text-align: center;
+  padding: 12px;
+  color: #fff;
+  border:none;
+  outline:none;
+  
+  }
+
+  .wrapper .form .btn{
+    width: 100%;
+    margin: 20px auto 0;
+    background: #3aaf9f;
+    text-align: center;
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  .wrapper .form .btn a{
+    color: #fff;
+  }
