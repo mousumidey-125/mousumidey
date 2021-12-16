@@ -13,7 +13,8 @@ from datetime import date
 
 
 
-
+def index(request):
+    return render(request,'common/index.html');
 
 @OnlyAuth
 def signin(request):

@@ -6,7 +6,7 @@ admin.site.site_title = "CDC ADMIN"
 admin.site.index_title = "CDC ADMIN"
 
 urlpatterns = [
-    path('', views.signin, name='signin'),
+    path('', views.index, name='index'),
     path('signin/', views.signin, name='signin'),
     path('signup/', views.signup, name='signup'),
     path('signout/', views.signout, name='signout'),
